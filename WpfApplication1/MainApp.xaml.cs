@@ -25,7 +25,6 @@ namespace WpfApplication1
             kinect.SkeletonStream.Enable();
             kinect.SkeletonFrameReady += kinect_SkeletonFrameReady;
             kinect.Start();
-
         }
 
         void kinect_SkeletonFrameReady(object sender, SkeletonFrameReadyEventArgs e)
@@ -49,9 +48,6 @@ namespace WpfApplication1
                 rhand_z.Text = String.Format("右手 Z:{0:0.0}", righthand.Position.Z);
 
                 PostureConfirm(user);
-                Joint hipcenter = user.Joints[JointType.HipCenter];
-
-
             }
         }
         bool actiongate = false; 
